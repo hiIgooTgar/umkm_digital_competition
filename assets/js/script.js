@@ -6,3 +6,6 @@ window.addEventListener("scroll", function () {
 // scroll infinite
 const rowTestimonials = document.querySelector(".row-testimonials");
 rowTestimonials.innerHTML += rowTestimonials.innerHTML;
+
+// copyright
+document.querySelector("#year_copyright").innerHTML = new Date().getFullYear();

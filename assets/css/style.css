@@ -75,6 +75,7 @@ body {
 
 .navbar .nav-left .nav-menu a {
   color: #000;
+  font-size: 0.98rem;
 }
 
 .active-menu {
@@ -567,4 +568,99 @@ body {
   color: #666;
   padding: 0.3rem 0.6rem;
   border-radius: 10px;
+}
+
+/* excellence section */
+.excellence {
+  padding: 2rem 4.5% 4rem;
+}
+
+.excellence .row-excellence {
+  display: flex;
+  gap: 2rem;
+}
+
+.excellence .row-excellence .left-excellence {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.excellence .row-excellence .left-excellence .detail .badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: var(--color-gradient);
+  padding: 0.4rem 1rem;
+  color: #fff;
+  border-radius: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.excellence .row-excellence .left-excellence .detail h2 {
+  line-height: 1.9rem;
+  font-size: 1.47rem;
+}
+
+.excellence .row-excellence .left-excellence .picture img {
+  width: 100%;
+}
+
+.excellence .row-excellence .right-excellence {
+  flex: 1 1 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.excellence .row-excellence .right-excellence .box-exc {
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 0.5px 0.5px #dcdcdc;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.excellence .row-excellence .right-excellence .box-exc:hover {
+  background: #f5f5f5;
+}
+
+.excellence .row-excellence .right-excellence .box-exc:hover h5 {
+  background: linear-gradient(
+    to bottom right,
+    var(--primary_teal),
+    var(--secondary_green)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.excellence .row-excellence .right-excellence .box-exc .title {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.excellence .row-excellence .right-excellence .box-exc .title .icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-gradient);
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 3px;
+}
+
+.excellence .row-excellence .right-excellence .box-exc .title h5 {
+  font-weight: 500;
+}
+
+.excellence .row-excellence .right-excellence .box-exc p {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  color: #666;
 }

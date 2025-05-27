@@ -800,9 +800,56 @@ body {
   padding: 2rem 4.5% 4rem;
 }
 
+.orders .row-orders {
+  background: var(--color-gradient);
+  color: #ffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.orders .row-orders .left-orders {
+  flex: 1 1 60%;
+}
+
+.orders .row-orders .left-orders p {
+  margin: 0.6rem 0;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+
+.orders .row-orders .left-orders a {
+  padding: 0.5rem 0.9rem;
+  color: #fff;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+
+.orders .row-orders .left-orders a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.orders .row-orders .right-orders {
+  flex: 1 1 40%;
+}
+
+.orders .row-orders .right-orders iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
 /* footer */
 footer {
-  padding: 3rem 4.5% 1.5rem;
   border-top: 1px solid #dcdcdc;
   box-shadow: 0 1px 2px #aaa;
   width: 100%;
@@ -812,6 +859,7 @@ footer .row-footer .up-footer {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  padding: 3rem 4.5% 0.7rem;
 }
 
 footer .row-footer .up-footer .left-footer {
@@ -839,6 +887,7 @@ footer .row-footer .up-footer .left-footer .social-media a {
   align-items: center;
   border-radius: 3px;
   color: #666;
+  background: rgba(102, 102, 102, 0.1);
 }
 
 footer .row-footer .up-footer .left-footer .social-media a:hover {
@@ -875,7 +924,7 @@ footer .row-footer .up-footer .right-footer .col-foot h4 {
 footer .row-footer .up-footer .right-footer .col-foot a {
   font-size: 0.86rem;
   color: #666;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
 }
 
 footer .row-footer .up-footer .right-footer .col-foot a:hover {
@@ -893,12 +942,14 @@ footer .row-footer .down-footer {
   justify-content: space-between;
   align-items: center;
   padding-top: 1.5rem;
-  border-top: 1.3px solid #dcdcdc;
+  padding: 1.5rem 4.5%;
+  background: #f7f7f7;
 }
 
 footer .row-footer .down-footer p {
   font-size: 0.85rem;
   display: flex;
+  color: #666;
   align-items: center;
 }
 
@@ -921,4 +972,8 @@ footer .row-footer .down-footer .menu-footer a:hover {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+footer .row-footer .down-footer #year_copyright {
+  margin-right: 0.3rem;
 }

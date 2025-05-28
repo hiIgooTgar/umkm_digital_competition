@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <div class="nav-left">
         <div class="logo">
           <a href=""><span class="color-span">Anyam</span>Nusa.</a>
@@ -27,15 +27,24 @@
       </div>
 
       <div class="nav-right">
-        <a class="btn-started" href="">Get Started</a>
+        <a class="btn-started" href="auth/sign-in.html">Get Started</a>
       </div>
     </nav>
+
+    <div class="scroll-info">
+      <a href="#hero" class="scroll-up">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+      <div class="app">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </div>
 
     <!-- home section start -->
     <section class="hero" id="hero">
       <main class="content">
         <span class="badge"
-          ><i class="fas fa-star"></i> No.1 #KaryaLokalBerseratAlam</span
+          ><i class="fas fa-star"></i> No.1 #BanggaAnyamanLokal</span
         >
         <h1>
           Jelajahi Keindahan
@@ -148,7 +157,7 @@
         <a href="">Semua Koleksi</a>
       </div>
       <div class="categories">
-        <div class="category">
+        <div class="category" id="category-scroll">
           <a href="" class="active-category">Semua Kategori</a>
           <a href="" class="category-list">Perabot Rumah Tangga</a>
           <a href="" class="category-list">Dekorasi Rumah</a>
@@ -157,6 +166,14 @@
           <a href="" class="category-list">Produk Lifestyle & Fashion</a>
           <a href="" class="category-list">Souvenir & Gift Set</a>
           <a href="" class="category-list">Dapur & Makan</a>
+          <a href="" class="category-list">Interior & Arsitektur</a>
+          <a href="" class="category-list">Organizer & Penyimpanan</a>
+          <a href="" class="category-list">Produk Anak & Edukatif</a>
+          <a href="" class="category-list">Ritual & Tradisi Lokal</a>
+          <a href="" class="category-list">Travel & Piknik</a>
+          <a href="" class="category-list">Dekorasi Acara / Pernikahan</a>
+          <a href="" class="category-list">Produk Ramah Lingkungan</a>
+          <a href="" class="category-list">Produk Premium / Koleksi Khusus</a>
         </div>
         <div class="paginate">
           <div class="left-paginate">
@@ -457,6 +474,11 @@
           </div>
         </div>
       </div>
+      <div class="all-product">
+        <a href=""
+          ><i class="fa-solid fa-check-to-slot"></i> <span>Semua Produk Anyaman</span></a
+        >
+      </div>
     </section>
 
     <!-- excellence section -->
@@ -712,14 +734,17 @@
     <section class="orders">
       <main class="row-orders">
         <div class="left-orders">
-          <h2>Pesan Sekarang, Bawa Pulang Karya Anyaman Asli Nusantara</h2>
+          <h2>
+            Pesan Sekarang, Bawa Pulang Karya Anyaman Asli Nusantara Berkualitas
+            Tinggi
+          </h2>
           <p>
             Temukan keindahan kerajinan tangan khas Indonesia dalam setiap
             produk kami. Semua dibuat langsung oleh pengrajin lokal dengan bahan
             alami dan sentuhan budaya yang otentik. Stok terbatas – segera
             miliki milikmu hari ini!
           </p>
-          <a href="">Beli Sekarang</a>
+          <a href=""><i class="fas fa-cart-shopping"></i> Beli Sekarang</a>
         </div>
         <div class="right-orders">
           <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
@@ -733,8 +758,15 @@
           <div class="left-footer">
             <h3><span class="color-span">Anyam</span>Nusa.</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, fuga
-              deleniti perspiciatis molestiae exercitationem porro.
+              AnyamNusa menghadirkan anyaman khas
+              <span class="color-span">Nusantara</span> sebagai bentuk cinta
+              pada <span class="color-span">budaya</span> lokal dan gaya hidup
+              berkelanjutan
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jl. Letjend Pol. Soemarto
+              No.127, Watumas, Purwanegara, Kec. Purwokerto Utara, Kabupaten
+              Banyumas, Jawa Tengah 53127
             </p>
             <div class="social-media">
               <a href=""><i class="fab fa-instagram"></i></a>

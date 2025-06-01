@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Fira Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary_teal: #009688;
+  --secondary_teal: #008080;
+  --primary_green: #4caf50;
+  --secondary_green: #66bb6a;
+  --color-gradient: linear-gradient(
+    to bottom right,
+    var(--primary_teal),
+    var(--secondary_green)
+  );
+}
+
+.color-span {
+  background: linear-gradient(
+    to bottom right,
+    var(--primary_teal),
+    var(--secondary_green)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.row-auth {
+  width: 100%;
+  min-height: 100dvh;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+}
+
+.row-auth .left-auth {
+  flex: 1 1 55%;
+  width: 100%;
+  min-height: 100dvh;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--color-gradient);
+  position: relative;
+  color: #fff;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.row-auth .left-auth a {
+  color: #fff;
+}
+
+.row-auth .left-auth .word h1 {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.row-auth .left-auth .word h2 {
+  margin-bottom: 0.3rem;
+  font-size: 1.6rem;
+}
+
+.row-auth .left-auth .word p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.row-auth .left-auth .slideshow-auth {
+  position: relative;
+}
+
+.row-auth .left-auth .slideshow-auth img {
+  width: 100%;
+  border-radius: 8px;
+  height: 330px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.row-auth .left-auth .content-dot {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 3px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #000;
+}
+
+.fade {
+  animation: fade_auth 1.5s ease-in-out;
+}
+
+@keyframes fade_auth {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.row-auth .right-auth {
+  flex: 1 1 45%;
+  display: flex;
+  min-height: 100dvh;
+  max-height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.row-auth .right-auth .header-auth {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.row-auth .right-auth .header-auth img {
+  width: 160px;
+}
+
+.row-auth .right-auth .header-auth p {
+  font-size: 0.93rem;
+  margin-top: 0.3rem;
+  color: #666;
+  line-height: 1.3rem;
+}
+
+.row-auth .right-auth .main-auth .f-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.row-auth .right-auth .main-auth .f-group .eye-icon {
+  position: absolute;
+  right: 16px;
+  top: 35.5px;
+  background-color: #fff;
+  padding-left: 14px;
+}
+
+.row-auth .right-auth .main-auth .f-group .eye-icon i {
+  color: #aaa;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.row-auth .right-auth .main-auth .f-group .eye-icon i:hover {
+  background: var(--color-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+.row-auth .right-auth .main-auth .f-group label {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.row-auth .right-auth .main-auth .f-group label span {
+  color: red;
+}
+
+.row-auth .right-auth .main-auth .f-group input {
+  padding: 0.73rem 1rem;
+  border: 1.4px solid #d3d3d3;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.row-auth .right-auth .main-auth .f-group input:focus {
+  border-color: var(--primary_teal);
+}
+
+.row-auth .right-auth .main-auth .f-group input::placeholder {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.row-auth .right-auth .main-auth .forget-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.87rem;
+  margin-bottom: 1.3rem;
+}
+
+.row-auth .right-auth .main-auth .forget-password .remember {
+  gap: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.row-auth
+  .right-auth
+  .main-auth
+  .forget-password
+  .remember
+  input[type="checkbox"] {
+  accent-color: var(--primary_teal) !important;
+  background-color: var(--primary_teal) !important;
+}
+
+.row-auth .right-auth .main-auth .btn-auth {
+  padding: 0.76rem 1rem;
+  background: var(--color-gradient);
+  border: none;
+  color: #fff;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 0.93rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  outline: none;
+}
+
+.row-auth .right-auth .line-or {
+  width: 100%;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.row-auth .right-auth .line-or .line {
+  width: 100%;
+  height: 1.6px;
+  background: #d3d3d3;
+}
+
+.row-auth .right-auth .line-or span {
+  font-size: 0.78rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 0.5rem 0.7rem;
+  color: #aaa;
+}
+
+.row-auth .right-auth .btn-google {
+  padding: 0.65rem 1rem;
+  border: 1.4px solid #d3d3d3;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  outline: none;
+  color: #444;
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.row-auth .right-auth .btn-google:hover {
+  background: #f5f5f5;
+}
+
+.row-auth .right-auth .btn-google img {
+  width: 20px;
+  height: 20px;
+}
+
+.sign-up-link {
+  text-align: center;
+  font-size: 0.88rem;
+  margin-top: 1.5rem;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .row-auth .left-auth {
+    display: none;
+  }
+
+  .row-auth .right-auth {
+    padding: 7%;
+  }
+}

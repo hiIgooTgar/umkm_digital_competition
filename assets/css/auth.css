@@ -239,6 +239,15 @@
   font-weight: 500;
   letter-spacing: 0.3px;
   outline: none;
+  cursor: pointer;
+}
+
+.row-auth .right-auth .main-auth .btn-auth:hover {
+  opacity: 0.9;
+}
+
+.btn-sign-up {
+  margin-top: 1rem;
 }
 
 .row-auth .right-auth .line-or {
@@ -294,6 +303,18 @@
   font-size: 0.88rem;
   margin-top: 1.5rem;
   color: #555;
+}
+
+@media screen and (max-width: 912px) {
+  .row-auth .left-auth {
+    padding: 9%;
+    flex: 1 1 50%;
+  }
+
+  .row-auth .right-auth {
+    padding: 9%;
+    flex: 1 1 50%;
+  }
 }
 
 @media screen and (max-width: 768px) {

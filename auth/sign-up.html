@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | AnyamNusa</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+  </head>
+  <body>
+    <section class="row-auth">
+      <div class="left-auth">
+        <div class="word">
+          <h1><a href="../">AnyamNusa.</a></h1>
+          <h2>Buat Akun dan Mulai Anyaman Ceritamu</h2>
+          <p>
+            Daftarkan dirimu di AnyamNusa dan jadi bagian dari gerakan mencintai
+            produk lokal. Temukan ragam anyaman khas dengan desain kekinian,
+            dukung kesejahteraan pengrajin, dan rasakan pengalaman belanja yang
+            sarat nilai budaya dan keaslian.
+          </p>
+        </div>
+        <div class="slideshow-auth">
+          <div class="slide-auth fade">
+            <img
+              src="../assets/images/auth/gambar-produk-1.png"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="slide-auth fade">
+            <img
+              src="../assets/images/auth/gambar-produk-2.png"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="slide-auth fade">
+            <img
+              src="../assets/images/auth/gambar-produk-3.png"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+        <div class="content-dot">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+      <div class="right-auth">
+        <div class="header-auth">
+          <img src="../assets/images/anyamnusa.png" alt="Logo AnyamNusa" />
+          <h1>
+            Bergabung Sekarang di Anyam<span class="color-span">Nusa</span>.
+          </h1>
+          <p>
+            Buat akun dan mulai jelajahi karya anyaman yang otentik dari
+            pengrajin Nusantara
+          </p>
+        </div>
+        <form action="" class="main-auth">
+          <div class="f-group">
+            <label for="name" class="f-label"
+              >Nama Lengkap <span>*</span></label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              placeholder="Masukkan nama lengkap anda"
+            />
+          </div>
+          <div class="f-group">
+            <label for="email" class="f-label">Email <span>*</span></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+              placeholder="Masukkan alamat email anda"
+            />
+          </div>
+          <div class="f-group">
+            <label for="password" class="f-label"
+              >Password <span>*</span></label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password_field"
+              autocomplete="off"
+              placeholder="Masukkan password anda"
+            />
+            <span class="eye-icon"><i class="fas fa-eye-slash"></i></span>
+          </div>
+
+          <button type="button" class="btn-auth btn-sign-up">Sign Up</button>
+        </form>
+        <div class="line-or">
+          <div class="line"></div>
+          <span>Atau Sign Up dengan</span>
+        </div>
+        <button type="button" class="btn-google">
+          <img src="../assets/images/icon/google.svg" alt="Google" />
+          <span>Sign Up dengan Google</span>
+        </button>
+        <p class="sign-up-link">
+          Anda sudah punya akun?
+          <a href="./sign-in.html" class="color-span">Sign In </a> sekarang
+        </p>
+      </div>
+    </section>
+
+    <script src="../assets/js/auth.js"></script>
+  </body>
+</html>

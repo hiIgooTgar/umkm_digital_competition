@@ -14,19 +14,29 @@
     <nav class="navbar" id="navbar">
       <div class="nav-left">
         <div class="logo">
-          <a href=""><span class="color-span">Anyam</span>Nusa.</a>
+          <a href=""
+            ><img src="./assets/images/anyamnusa.png" alt="Logo AnyamNusa"
+          /></a>
         </div>
-        <div class="nav-menu">
-          <a href="" class="nav-list active-menu">Beranda</a>
-          <a href="" class="nav-list">Tentang Kami</a>
-          <a href="" class="nav-list">Produk</a>
-          <a href="" class="nav-list">Keunggulan</a>
-          <a href="" class="nav-list">Testimoni</a>
-          <a href="" class="nav-list">Order Sekarang</a>
+        <div class="nav-menu" id="nav-menu">
+          <div class="content">
+            <div class="head">
+              <i class="fas fa-x" id="closeNav" onclick="hideMenuNav()"></i>
+              <img src="./assets/images/anyamnusa.png" alt="Logo AnyamNusa" />
+            </div>
+            <a href="" class="nav-list active-menu">Beranda</a>
+            <a href="" class="nav-list">Tentang Kami</a>
+            <a href="" class="nav-list">Produk</a>
+            <a href="" class="nav-list">Keunggulan</a>
+            <a href="" class="nav-list">Testimoni</a>
+            <a href="" class="nav-list">Order Sekarang</a>
+            <a class="btn-started" href="auth/sign-in.html">Get Started</a>
+          </div>
         </div>
       </div>
 
       <div class="nav-right">
+        <i class="fas fa-bars" id="hamburger" onclick="showMenuNav()"></i>
         <a class="btn-started" href="auth/sign-in.html">Get Started</a>
       </div>
     </nav>
@@ -154,7 +164,13 @@
           <h2>Koleksi Produk <span class="color-span">Anyam</span>Nusa</h2>
           <h5>100</h5>
         </div>
-        <a href="">Semua Koleksi</a>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          autocomplete="off"
+          placeholder="Pencarian Produk Anyaman.."
+        />
       </div>
       <div class="categories">
         <div class="category" id="category-scroll">
@@ -476,7 +492,8 @@
       </div>
       <div class="all-product">
         <a href=""
-          ><i class="fa-solid fa-check-to-slot"></i> <span>Semua Produk Anyaman</span></a
+          ><i class="fa-solid fa-check-to-slot"></i>
+          <span>Semua Produk Anyaman</span></a
         >
       </div>
     </section>
@@ -756,7 +773,7 @@
       <div class="row-footer">
         <div class="up-footer">
           <div class="left-footer">
-            <h3><span class="color-span">Anyam</span>Nusa.</h3>
+            <img src="./assets/images/anyamnusa.png" alt="Logo AnyamNusa" />
             <p>
               AnyamNusa menghadirkan anyaman khas
               <span class="color-span">Nusantara</span> sebagai bentuk cinta

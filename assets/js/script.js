@@ -3,6 +3,14 @@ window.addEventListener("scroll", function () {
   navbarNav.classList.toggle("sticky-nav", window.scrollY > 0);
 });
 
+const navbarMenu = document.getElementById("nav-menu");
+function hideMenuNav() {
+  navbarMenu.style.right = "-100%";
+}
+function showMenuNav() {
+  navbarMenu.style.right = "0";
+}
+
 // scroll-up
 window.addEventListener("scroll", function () {
   let scrollUp = document.querySelector(".scroll-up");

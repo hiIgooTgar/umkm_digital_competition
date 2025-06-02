@@ -129,5 +129,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 700);
   }
 
-  setInterval(changeBackground, 3000);
+  setInterval(changeBackground, 30000);
 });

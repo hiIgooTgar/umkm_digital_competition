@@ -101,3 +101,33 @@ function scrollTracker() {
 }
 
 window.addEventListener("scroll", scrollTracker);
+
+// beranda change photo every 30 seconds
+document.addEventListener("DOMContentLoaded", function () {
+  const heroBg = document.querySelector(".hero-bg");
+  const images = [
+    "./assets/images/auth/gambar-produk-1.png",
+    "./assets/images/auth/gambar-produk-2.png",
+    "./assets/images/auth/gambar-produk-3.png",
+  ];
+
+  let current = 0;
+  function changeBackground() {
+    heroBg.style.opacity = 0;
+    setTimeout(() => {
+      current = (current + 1) % images.length;
+      heroBg.style.backgroundImage = `
+        linear-gradient(
+          rgba(255, 255, 255, 0.85),
+          rgba(255, 255, 255, 0.85),
+          rgba(255, 255, 255, 0.8),
+          rgba(0, 150, 136, 0.7)
+        ), url("${images[current]}")
+      `;
+
+      heroBg.style.opacity = 1;
+    }, 700);
+  }
+
+  setInterval(changeBackground, 3000);
+});

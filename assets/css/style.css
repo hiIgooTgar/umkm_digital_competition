@@ -953,6 +953,156 @@ body {
   border-radius: 8px;
 }
 
+/* faq */
+.faq {
+  padding: 4.8rem 4.5%;
+}
+
+.faq .row-faq {
+  display: flex;
+  gap: 3rem;
+}
+
+.faq .row-faq .left-faq {
+  flex: 1 1 70%;
+}
+
+.faq .row-faq .left-faq .accordion-row {
+  display: flex;
+  gap: 0.7rem;
+  flex-direction: column;
+}
+
+.faq .row-faq .left-faq .accordion-row .accordion-item {
+  border: 1.5px solid #dedede;
+  width: 100%;
+  border-radius: 4px;
+  width: 100%;
+  padding: 1rem;
+  min-height: auto;
+}
+
+.faq .row-faq .left-faq .accordion-row .accordion-item[data-expanded="true"] {
+  border-color: var(--primary_teal);
+  background-color: #fafafa;
+}
+
+.faq .row-faq .left-faq .accordion-row .accordion-item:hover {
+  background: #fafafa;
+}
+
+.faq
+  .row-faq
+  .left-faq
+  .accordion-row
+  .accordion-item
+  button[aria-expanded="true"] {
+  border-bottom: 1.5px solid var(--primary_teal);
+}
+
+.faq .row-faq .left-faq .accordion-row button {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  width: 100%;
+  color: #333;
+  font-size: 0.93rem;
+  font-weight: 500;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  gap: 0.8rem;
+}
+
+.faq .row-faq .left-faq .accordion-row button .accordion-title {
+  flex: 1 1 95%;
+  line-height: 1.26rem;
+}
+
+.faq .row-faq .left-faq .accordion-row button .icon {
+  flex: 1 1 5%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+
+.faq .row-faq .left-faq .accordion-row button .icon span {
+  font-size: 0.6rem;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  padding: 0.3rem;
+}
+
+.faq .row-faq .left-faq .accordion-row button[aria-expanded="true"] {
+  padding-bottom: 0.7rem;
+  color: var(--primary_teal);
+}
+
+.faq .row-faq .left-faq .accordion-row button[aria-expanded="true"] .icon span {
+  border: 1px solid var(--primary_teal);
+}
+
+.faq .row-faq .left-faq .accordion-row button[aria-expanded="true"] .icon i {
+  transform: rotate(90deg);
+}
+
+.faq
+  .row-faq
+  .left-faq
+  .accordion-row
+  button[aria-expanded="true"]
+  + .accordion-content {
+  opacity: 1;
+  max-height: 100%;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.faq .row-faq .left-faq .accordion-row .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.faq .row-faq .left-faq .accordion-row .accordion-content p {
+  font-size: 0.88rem;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 1.2rem;
+  margin: 0.6rem 0 0.5rem;
+  color: #444;
+}
+
+.faq .row-faq .right-faq {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq .row-faq .right-faq .detail .badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: var(--color-gradient);
+  padding: 0.4rem 1rem;
+  color: #fff;
+  border-radius: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.faq .row-faq .right-faq .detail h2 {
+  line-height: 1.9rem;
+  font-size: 1.47rem;
+}
+
+.faq .row-faq .right-faq .picture img {
+  width: 100%;
+}
+
 /* footer */
 footer {
   border-top: 1px solid #dcdcdc;
@@ -1165,6 +1315,10 @@ footer .row-footer .down-footer #year_copyright {
   .navbar .nav-right .btn-started {
     display: none;
   }
+
+  .faq .row-faq {
+    gap: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1253,6 +1407,18 @@ footer .row-footer .down-footer #year_copyright {
   .testimonials .header {
     width: 80%;
   }
+
+  .faq .row-faq {
+    gap: 2rem;
+  }
+
+  .faq .row-faq .left-faq {
+    flex: 1 1 60%;
+  }
+
+  .faq .row-faq .right-faq {
+    flex: 1 1 40%;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1319,6 +1485,18 @@ footer .row-footer .down-footer #year_copyright {
 
   .orders .row-orders {
     padding: 2rem 1.25rem;
+  }
+
+  .faq .row-faq {
+    flex-direction: column-reverse;
+  }
+
+  .faq .row-faq .left-faq {
+    flex: 1 1 100%;
+  }
+
+  .faq .row-faq .right-faq {
+    flex: 1 1 100%;
   }
 
   footer .row-footer .up-footer {

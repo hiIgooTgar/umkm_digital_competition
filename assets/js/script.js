@@ -55,3 +55,24 @@ btnCategoryLeft.addEventListener("click", () => {
 btnCategoryRight.addEventListener("click", () => {
   scrollXCateory.scrollBy({ left: 200, behavior: "smooth" });
 });
+
+// accordion faq
+const items = document.querySelectorAll(".accordion-row button");
+
+items.forEach((item) => {
+  item.addEventListener("click", function () {
+    const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+    // Tutup semua item terlebih dahulu
+    items.forEach((btn) => {
+      btn.setAttribute("aria-expanded", "false");
+      btn.closest(".accordion-item").removeAttribute("data-expanded");
+    });
+
+    // Jika item sebelumnya tidak terbuka, buka yang diklik
+    if (!isExpanded) {
+      this.setAttribute("aria-expanded", "true");
+      this.closest(".accordion-item").setAttribute("data-expanded", "true");
+    }
+  });
+});

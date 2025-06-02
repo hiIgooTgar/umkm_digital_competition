@@ -93,6 +93,7 @@ body {
 .navbar .nav-left .nav-menu .content .nav-list {
   color: #000;
   font-size: 0.968rem;
+  position: relative;
 }
 
 .navbar .nav-left .nav-menu .content .btn-started {
@@ -1358,7 +1359,7 @@ footer .row-footer .down-footer #year_copyright {
   }
 
   .product .categories .category {
-    flex: 1 1 80%;
+    flex: 1 1 78%;
   }
 
   .product .categories .category .category-list {
@@ -1374,7 +1375,7 @@ footer .row-footer .down-footer #year_copyright {
   }
 
   .product .categories .paginate {
-    flex: 1 1 20%;
+    flex: 1 1 22%;
     gap: 0.3rem;
   }
 
@@ -1426,9 +1427,21 @@ footer .row-footer .down-footer #year_copyright {
     width: 100%;
   }
 
+  .btn-primary-outline-black {
+    border: 1.7px solid #000;
+  }
+
   .partner .row-partner .col-partner {
     flex: 1 1 calc((100% - 2rem) / 2);
     max-width: calc((100% - 2rem) / 2);
+  }
+
+  .product .header-title {
+    align-items: start;
+  }
+
+  .product .header-title .count h2 {
+    font-size: 1.35rem;
   }
 
   .product .categories {

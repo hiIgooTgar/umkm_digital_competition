@@ -1,8 +1,10 @@
+// sticku navbar
+let navbarNav = document.querySelector(".navbar");
 window.addEventListener("scroll", function () {
-  let navbarNav = document.querySelector(".navbar");
   navbarNav.classList.toggle("sticky-nav", window.scrollY > 0);
 });
 
+// responsvive nav-menu
 const navbarMenu = document.getElementById("nav-menu");
 function hideMenuNav() {
   navbarMenu.style.right = "-100%";
@@ -10,6 +12,23 @@ function hideMenuNav() {
 function showMenuNav() {
   navbarMenu.style.right = "0";
 }
+
+// jika klik nav-list maka close menu
+let navMenuList = document.querySelectorAll(".nav-list");
+navMenuList.forEach(function (linkMenu) {
+  linkMenu.addEventListener("click", () => {
+    navbarMenu.style.right = "-100%";
+  });
+});
+
+document.addEventListener("click", function (e) {
+  if (
+    navbarMenu.contains(e.target) &&
+    !document.querySelector(".nav-menu .content").contains(e.target)
+  ) {
+    navbarMenu.style.right = "-100%";
+  }
+});
 
 // scroll-up
 window.addEventListener("scroll", function () {

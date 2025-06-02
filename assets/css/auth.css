@@ -189,11 +189,23 @@
 }
 
 .row-auth .right-auth .main-auth .f-group input {
-  padding: 0.73rem 1rem;
   border: 1.4px solid #d3d3d3;
   border-radius: 6px;
   font-size: 0.9rem;
   outline: none;
+}
+
+.row-auth .right-auth .main-auth .f-group #name,
+.row-auth .right-auth .main-auth .f-group #email,
+.row-auth .right-auth .main-auth .f-group input[type="number"] {
+  padding: 0.73rem 1rem;
+}
+
+.row-auth .right-auth .main-auth .f-group #password_field {
+  padding-left: 1rem;
+  padding-right: 3rem;
+  padding-top: 0.73rem;
+  padding-bottom: 0.73rem;
 }
 
 .row-auth .right-auth .main-auth .f-group input:focus {

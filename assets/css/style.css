@@ -10,6 +10,7 @@
   scroll-behavior: smooth;
 }
 
+/* 
 @keyframes appear {
   from {
     opacity: 0;
@@ -25,7 +26,7 @@ section {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
-}
+} */
 
 :root {
   --primary_teal: #009688;
@@ -172,6 +173,9 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--color-gradient);
+}
+
+.scroll-info .app a {
   color: #fff;
 }
 
@@ -307,14 +311,18 @@ body {
 }
 
 .partner .row-partner {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .partner .row-partner .col-partner {
   padding: 0.5rem;
+  flex: 1 1 calc((100% - 8rem) / 5);
+  max-width: calc((100% - 8rem) / 5);
 }
 
 .partner .row-partner .col-partner:hover {
@@ -1044,7 +1052,6 @@ footer .row-footer .down-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
   padding: 1.5rem 4.5%;
   background: #f7f7f7;
 }
@@ -1124,9 +1131,13 @@ footer .row-footer .down-footer #year_copyright {
     right: 1.5rem;
     font-size: 0.75em;
     border-radius: 4px;
-    color: #777;
+    color: var(--primary_teal);
     padding: 0.3rem;
-    border: 1.3px solid #777;
+    border: 1.3px solid var(--primary_teal);
+  }
+
+  .navbar .nav-left .nav-menu .content .head i {
+    background: rgba(0, 150, 136, 0.1);
   }
 
   .navbar .nav-left .nav-menu .content a {
@@ -1142,9 +1153,13 @@ footer .row-footer .down-footer #year_copyright {
     display: inline-block;
     font-size: 0.87em;
     border-radius: 4px;
-    color: #000;
     padding: 0.65rem;
-    border: 1.5px solid #000;
+    color: var(--primary_teal);
+    border: 1.5px solid var(--primary_teal);
+  }
+
+  .navbar .nav-right #hamburger:hover {
+    background: rgba(0, 150, 136, 0.1);
   }
 
   .navbar .nav-right .btn-started {
@@ -1153,6 +1168,11 @@ footer .row-footer .down-footer #year_copyright {
 }
 
 @media screen and (max-width: 768px) {
+  .partner .row-partner .col-partner {
+    flex: 1 1 calc((100% - 4rem) / 3);
+    max-width: calc((100% - 4rem) / 3);
+  }
+
   .about .row-about {
     flex-direction: column;
   }
@@ -1165,6 +1185,12 @@ footer .row-footer .down-footer #year_copyright {
     flex: 1 1 100%;
   }
 
+  .about .row-about .right-about .qoute {
+    justify-content: start;
+    gap: 0.5rem;
+    align-items: start;
+  }
+
   .product .header-title {
     flex-direction: column;
   }
@@ -1175,6 +1201,41 @@ footer .row-footer .down-footer #year_copyright {
 
   .product .header-title #search {
     width: 100%;
+  }
+
+  .product .categories .category {
+    flex: 1 1 80%;
+  }
+
+  .product .categories .category .category-list {
+    font-size: 0.76rem;
+    padding: 0.43rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .active-category {
+    font-size: 0.76rem;
+    padding: 0.43rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .product .categories .paginate {
+    flex: 1 1 20%;
+    gap: 0.3rem;
+  }
+
+  .product .categories .paginate .left-paginate {
+    width: 28.3px;
+    height: 28.3px;
+    border: 1.4px solid #000;
+    font-size: 0.75rem;
+  }
+
+  .product .categories .paginate .right-paginate {
+    width: 28.3px;
+    height: 28.3px;
+    border: 1.4px solid #000;
+    font-size: 0.75rem;
   }
 
   .product .row-product {
@@ -1199,12 +1260,21 @@ footer .row-footer .down-footer #year_copyright {
     width: 100%;
   }
 
-  .partner .row-partner {
-    grid-template-columns: repeat(2, 1fr);
+  .partner .row-partner .col-partner {
+    flex: 1 1 calc((100% - 2rem) / 2);
+    max-width: calc((100% - 2rem) / 2);
+  }
+
+  .product .categories {
+    margin: 1.2rem 0 1.5rem;
   }
 
   .product .row-product {
     grid-template-columns: 1fr;
+  }
+
+  .product .row-product .col-product .d-img {
+    height: 200px;
   }
 
   .excellence .row-excellence {
@@ -1223,8 +1293,16 @@ footer .row-footer .down-footer #year_copyright {
     grid-template-columns: 1fr;
   }
 
+  .testimonials {
+    mask-image: none;
+  }
+
   .testimonials .header {
     width: 100%;
+  }
+
+  .testimonials .row-testimonials .col-testimonials {
+    width: 300px;
   }
 
   .orders .row-orders {
@@ -1240,7 +1318,7 @@ footer .row-footer .down-footer #year_copyright {
   }
 
   .orders .row-orders {
-    padding: 1.25rem;
+    padding: 2rem 1.25rem;
   }
 
   footer .row-footer .up-footer {
@@ -1260,5 +1338,6 @@ footer .row-footer .down-footer #year_copyright {
   footer .row-footer .down-footer {
     gap: 1rem;
     flex-direction: column-reverse;
+    padding: 1.8rem 4.5%;
   }
 }

@@ -40,6 +40,103 @@ window.addEventListener("scroll", function () {
 const rowTestimonials = document.querySelector(".row-testimonials");
 rowTestimonials.innerHTML += rowTestimonials.innerHTML;
 
+// round-up
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".count-comfort");
+  const speed = 150;
+
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText.replace(/\D/g, "");
+      const increment = Math.ceil(target / speed);
+
+      if (count < target) {
+        counter.innerText = (count + increment).toLocaleString() + "+";
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target.toLocaleString() + "+";
+      }
+    };
+
+    updateCount();
+  });
+});
+
+// search product and search by categories list product
+const products = document.querySelectorAll(".col-product");
+const noResult = document.querySelector(".no-result-product");
+const searchInput = document.getElementById("search");
+const categoryItems = document.querySelectorAll(
+  "#category-scroll .category-list"
+);
+
+let currentKeyword = "";
+let currentCategory = "Semua Kategori";
+
+function filterProducts() {
+  let matchCount = 0;
+
+  products.forEach((product) => {
+    const span =
+      product.querySelector(".d-desc span")?.innerText.toLowerCase() || "";
+    const title =
+      product.querySelector(".d-desc .title")?.innerText.toLowerCase() || "";
+    const price =
+      product.querySelector(".d-desc .price")?.innerText.toLowerCase() || "";
+    const productCategory = product.getAttribute("data-category");
+
+    const matchKeyword =
+      span.includes(currentKeyword) ||
+      title.includes(currentKeyword) ||
+      price.includes(currentKeyword);
+
+    const matchCategory =
+      currentCategory === "Semua Kategori" ||
+      productCategory === currentCategory;
+
+    const isMatch = matchKeyword && matchCategory;
+
+    product.style.display = isMatch ? "block" : "none";
+    if (isMatch) matchCount++;
+  });
+
+  noResult.style.display = matchCount === 0 ? "block" : "none";
+}
+
+searchInput.addEventListener("input", function () {
+  currentKeyword = this.value.toLowerCase();
+  filterProducts();
+});
+
+categoryItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    categoryItems.forEach((i) => i.classList.remove("active-category"));
+    item.classList.add("active-category");
+
+    currentCategory = item.textContent.trim();
+    filterProducts();
+  });
+});
+
+// description product
+document.querySelectorAll(".d-desc p").forEach((paragraph) => {
+  const words = paragraph.innerText.trim().split(/\s+/);
+  if (words.length > 20) {
+    const truncated = words.slice(0, 20).join(" ") + " ....";
+    paragraph.innerText = truncated;
+  }
+});
+
+// description blogs
+document.querySelectorAll(".d-blogs p").forEach((paragraph) => {
+  const words = paragraph.innerText.trim().split(/\s+/);
+  if (words.length > 19) {
+    const truncated = words.slice(0, 19).join(" ") + " ....";
+    paragraph.innerText = truncated;
+  }
+});
+
 // copyright
 document.querySelector("#year_copyright").innerHTML = new Date().getFullYear();
 
@@ -106,9 +203,9 @@ window.addEventListener("scroll", scrollTracker);
 document.addEventListener("DOMContentLoaded", function () {
   const heroBg = document.querySelector(".hero-bg");
   const images = [
-    "./assets/images/auth/gambar-produk-1.png",
-    "./assets/images/auth/gambar-produk-2.png",
-    "./assets/images/auth/gambar-produk-3.png",
+    "./assets/images/hero/anyaman-1.webp",
+    "./assets/images/hero/anyaman-2.webp",
+    "./assets/images/hero/anyaman-3.jpg",
   ];
 
   let current = 0;

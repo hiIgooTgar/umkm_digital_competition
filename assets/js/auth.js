@@ -1,56 +1,31 @@
+// Password visibility
 const fieldPassword = document.getElementById("password_field");
-const eyePassword = document.querySelector(".eye-icon i");
+const eyeIcon = document.querySelector(".eye-icon i");
 
-eyePassword.addEventListener("click", function () {
-  if (fieldPassword.type == "password") {
-    fieldPassword.type = "text";
-    eyePassword.classList.remove("fa-eye-slash");
-    eyePassword.classList.add("fa-eye");
-  } else {
-    fieldPassword.type = "password";
-    eyePassword.classList.add("fa-eye-slash");
-    eyePassword.classList.remove("fa-eye");
-  }
+eyeIcon.addEventListener("click", () => {
+  const isHidden = fieldPassword.type === "password";
+  fieldPassword.type = isHidden ? "text" : "password";
+  eyeIcon.classList.toggle("fa-eye");
+  eyeIcon.classList.toggle("fa-eye-slash");
 });
 
-// slideshow
-let slideIndex = 1;
+// Slideshow
+let slideIndex = 0;
+const slides = Array.from(document.getElementsByClassName("slide-auth"));
+const dots = Array.from(document.getElementsByClassName("dot"));
+const totalSlides = slides.length;
+
+function showSlides(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+    dots[i].classList.toggle("active", i === index);
+  });
+}
+
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % totalSlides;
+  showSlides(slideIndex);
+}
+
 showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide-auth");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    sli;
-    deIndex = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-setInterval(() => {
-  plusSlides(1);
-}, 7000);
+setInterval(nextSlide, 7000);

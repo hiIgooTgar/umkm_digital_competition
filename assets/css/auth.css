@@ -338,4 +338,8 @@
   .row-auth .right-auth {
     padding: 7%;
   }
+
+  .row-auth .right-auth .main-auth .f-group .eye-icon {
+    top: 34.3px;
+  }
 }

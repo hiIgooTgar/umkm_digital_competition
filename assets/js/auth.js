@@ -9,23 +9,44 @@ eyeIcon.addEventListener("click", () => {
   eyeIcon.classList.toggle("fa-eye-slash");
 });
 
-// Slideshow
-let slideIndex = 0;
-const slides = Array.from(document.getElementsByClassName("slide-auth"));
-const dots = Array.from(document.getElementsByClassName("dot"));
-const totalSlides = slides.length;
-
-function showSlides(index) {
-  slides.forEach((slide, i) => {
-    slide.style.display = i === index ? "block" : "none";
-    dots[i].classList.toggle("active", i === index);
-  });
-}
-
-function nextSlide() {
-  slideIndex = (slideIndex + 1) % totalSlides;
-  showSlides(slideIndex);
-}
-
+// slideshow
+let slideIndex = 1;
 showSlides(slideIndex);
-setInterval(nextSlide, 7000);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide-auth");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    sli;
+    deIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+setInterval(() => {
+  plusSlides(1);
+}, 7000);

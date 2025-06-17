@@ -13,14 +13,6 @@ function showMenuNav() {
   navbarMenu.style.right = "0";
 }
 
-// jika klik nav-list maka close menu
-let navMenuList = document.querySelectorAll(".nav-list");
-navMenuList.forEach(function (linkMenu) {
-  linkMenu.addEventListener("click", () => {
-    navbarMenu.style.right = "-100%";
-  });
-});
-
 document.addEventListener("click", function (e) {
   if (
     navbarMenu.contains(e.target) &&
@@ -28,6 +20,46 @@ document.addEventListener("click", function (e) {
   ) {
     navbarMenu.style.right = "-100%";
   }
+});
+
+// Submenu toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const toggles = document.querySelectorAll(".toggle-submenu");
+
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const parent = this.parentElement;
+      const submenu = parent.querySelector(".submenu");
+      document
+        .querySelectorAll(".nav-item.has-submenu .submenu")
+        .forEach(function (el) {
+          if (el !== submenu) {
+            el.classList.remove("show");
+          }
+        });
+
+      submenu.classList.toggle("show");
+      const icon = this.querySelector("i");
+      document.querySelectorAll(".toggle-submenu i").forEach((i) => {
+        if (i !== icon) i.classList.remove("rotate-navbar");
+      });
+      icon.classList.toggle("rotate-navbar");
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    const isClickInsideNav = e.target.closest(".has-submenu");
+    if (!isClickInsideNav) {
+      document.querySelectorAll(".submenu").forEach(function (el) {
+        el.classList.remove("show");
+      });
+      document.querySelectorAll(".toggle-submenu i").forEach(function (i) {
+        i.classList.remove("rotate-navbar");
+      });
+    }
+  });
 });
 
 // scroll-up

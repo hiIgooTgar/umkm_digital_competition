@@ -101,7 +101,8 @@ section {
 }
 
 .navbar .nav-left .nav-menu .content img,
-.navbar .nav-left .nav-menu .content i:not(.nav-item .nav-list i) {
+.navbar .nav-left .nav-menu .content .head #closeNav,
+.navbar .nav-left .nav-menu .content .submenu i {
   display: none;
 }
 
@@ -273,7 +274,7 @@ section {
 
 .header-menu .row-header-menu .content p {
   line-height: 1.35rem;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: #333;
 }
 
@@ -608,7 +609,7 @@ section {
 
 .services .header p {
   color: #666;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   line-height: 1.2rem;
 }
 
@@ -713,7 +714,7 @@ section {
 }
 
 .services .row-services .col-right .content .box span {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .services .row-services .col-right .content .box:nth-child(odd) {
@@ -731,7 +732,7 @@ section {
       )
       border-box;
   border-radius: 5px;
-  border: 2.5px solid transparent;
+  border: 2px solid transparent;
 }
 
 .services .row-services .col-right .qoute {
@@ -1191,7 +1192,7 @@ section {
 
 .testimonials .header p {
   color: #666;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   line-height: 1.2rem;
 }
 
@@ -1301,7 +1302,7 @@ section {
 
 .blogs .header p {
   color: #666;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   line-height: 1.2rem;
 }
 
@@ -1920,7 +1921,7 @@ footer .row-footer .down-footer #year_copyright {
     display: inline-block;
   }
 
-  .navbar .nav-left .nav-menu .content .head i {
+  .navbar .nav-left .nav-menu .content .head #closeNav {
     display: inline-block;
     position: absolute;
     top: 2rem;
@@ -1932,7 +1933,7 @@ footer .row-footer .down-footer #year_copyright {
     border: 1.3px solid var(--primary_teal);
   }
 
-  .navbar .nav-left .nav-menu .content .head i {
+  .navbar .nav-left .nav-menu .content .head #closeNav {
     background: rgba(0, 150, 136, 0.1);
   }
 

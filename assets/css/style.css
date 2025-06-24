@@ -580,27 +580,6 @@ section {
   line-height: 1.35rem;
 }
 
-.about-anyamnusa .qoute {
-  color: #616161;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.7rem;
-  background: #f1f1f1;
-  border-radius: 7px;
-  margin-top: 0.8rem;
-}
-
-.about-anyamnusa .qoute i {
-  font-size: 1.5rem;
-}
-
-.about-anyamnusa .qoute h4 {
-  font-size: 1.05rem;
-  letter-spacing: 0.2px;
-}
-
 /* services */
 .services {
   padding: 4.8rem 4.5% 2.5rem;
@@ -635,7 +614,7 @@ section {
 
 .services .row-services {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .services .row-services .col-left {
@@ -645,8 +624,143 @@ section {
   gap: 1rem;
 }
 
+.services .row-services .col-left .box {
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 0.5px 0.5px #dcdcdc;
+  display: inline-block;
+}
+
+.services .row-services .col-left .box:hover {
+  background: #f5f5f5;
+}
+
+.services .row-services .col-left .box .c-detail {
+  padding: 3.8rem 1rem 1.5rem;
+}
+
+.services .row-services .col-left .box .c-icon {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-bottom-right-radius: 13px;
+  border-right: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 0 0.5rem 0.5rem 0;
+}
+
+.services .row-services .col-left .box .c-icon .d-i {
+  width: 50px;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-gradient);
+}
+
+.services .row-services .col-left .box .c-icon i {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.services .row-services .col-left .box h3 {
+  font-size: 1.05rem;
+  color: #000;
+  margin: 0.4rem 0 0.45rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--primary_teal),
+    var(--secondary_green)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.3rem;
+}
+
+.services .row-services .col-left .box p {
+  font-size: 0.85rem;
+  text-align: justify;
+  color: #666;
+  line-height: 1.2rem;
+}
+
 .services .row-services .col-right {
   flex: 1 1 30%;
+}
+
+.services .row-services .col-right .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.services .row-services .col-right .content .box {
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+.services .row-services .col-right .content .box h3 {
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.services .row-services .col-right .content .box span {
+  font-size: 0.85rem;
+}
+
+.services .row-services .col-right .content .box:nth-child(odd) {
+  background: var(--color-gradient);
+  color: #fff;
+}
+
+.services .row-services .col-right .content .box:nth-child(even) {
+  color: #000;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(
+        to bottom right,
+        var(--primary_teal),
+        var(--secondary_green)
+      )
+      border-box;
+  border-radius: 5px;
+  border: 2.5px solid transparent;
+}
+
+.services .row-services .col-right .qoute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto 0;
+  max-width: 100%;
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.services .row-services .col-right .qoute .d-qoute {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+  color: #616161;
+}
+
+.services .row-services .col-right .qoute .d-qoute i {
+  font-size: 1.3rem;
+}
+
+.services .row-services .col-right .qoute .d-qoute h4 {
+  font-size: 0.96rem;
+  letter-spacing: 0.2px;
+  line-height: 1.3rem;
 }
 
 /* product section */
@@ -1901,6 +2015,20 @@ footer .row-footer .down-footer #year_copyright {
     padding: 3rem 0;
   }
 
+  .services .row-services {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .services .row-services .col-left {
+    flex: 1 1 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services .row-services .col-right {
+    flex: 1 1 100%;
+  }
+
   .faq .row-faq {
     gap: 2.5rem;
   }
@@ -2155,6 +2283,10 @@ footer .row-footer .down-footer #year_copyright {
   .about .row-about,
   .about-anyamnusa .row-about {
     gap: 1rem;
+  }
+
+  .services .row-services .col-left {
+    grid-template-columns: 1fr;
   }
 
   .product .header-title {

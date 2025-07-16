@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk AnyamNusa.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <a href="#"
+            ><img src="../assets/images/anyamnusa.png" alt="Logo AnyamNusa"
+          /></a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <div class="content">
+            <div class="head">
+              <i class="fas fa-x" id="closeNav" onclick="hideMenuNav()"></i>
+              <img src="../assets/images/anyamnusa.png" alt="Logo AnyamNusa" />
+            </div>
+            <a href="#beranda" class="nav-list active-menu">Beranda</a>
+            <div class="nav-item has-submenu">
+              <a href="#" class="nav-list toggle-submenu">
+                Tentang Kami <i class="fas fa-chevron-down first chev-i"></i>
+              </a>
+              <div class="submenu feat-show">
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Kisah AnyamNusa</a
+                >
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Team AnyamNusa</a
+                >
+              </div>
+            </div>
+
+            <a href="#produk" class="nav-list">Produk</a>
+            <a href="#testimoni" class="nav-list">Testimoni</a>
+
+            <div class="nav-item has-submenu">
+              <a href="#" class="nav-list toggle-submenu">
+                Galeri <i class="fas fa-chevron-down second chev-i"></i>
+              </a>
+              <div class="submenu serv-show">
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Foto</a
+                >
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Video</a
+                >
+              </div>
+            </div>
+
+            <a href="#blogs" class="nav-list">Blogs & Artikel</a>
+            <div class="nav-item has-submenu">
+              <a href="#" class="nav-list toggle-submenu">
+                Dukungan Lainnya
+                <i class="fas fa-chevron-down third chev-i"></i>
+              </a>
+              <div class="submenu serv-show">
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> FAQs</a
+                >
+              </div>
+            </div>
+            <a class="btn-started" href="auth/sign-in.html">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <i class="fas fa-list-ul" id="hamburger" onclick="showMenuNav()"></i>
+        <a class="btn-started" href="auth/sign-in.html">Get Started</a>
+      </div>
+    </nav>
+
+    <div class="scroll-info">
+      <a href="#beranda" class="scroll-up">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+      <div class="app">
+        <a href=""><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="header-menu">
+      <div class="bars">
+        <div class="box">
+          <img src="../assets/images/anyamnusa.png" alt="" />
+        </div>
+      </div>
+      <div class="row-header-menu">
+        <div class="content">
+          <span class="submenu"> Produk AnyamNusa</span>
+          <h2>
+            Aneka <span class="color-span">Produk</span> Anyaman yang
+            <span class="color-span">Penuh</span> Nilai dan Cerita
+          </h2>
+          <p>
+            Produk AnyamNusa tak sekadar fungsional, namun juga menyimpan kisah
+            budaya dan sentuhan tangan pengrajin yang sarat makna dalam setiap
+            detailnya.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="product" id="produk">
+      <div class="header-title">
+        <div class="count">
+          <h2>Koleksi Produk <span class="color-span">Anyam</span>Nusa</h2>
+          <h5>218</h5>
+        </div>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          autocomplete="off"
+          placeholder="Pencarian Produk Anyaman.."
+        />
+      </div>
+      <div class="categories">
+        <div class="category" id="category-scroll">
+          <span class="category-list active-category">Semua Kategori</span>
+          <span class="category-list">Perabot Rumah Tangga</span>
+          <span class="category-list">Dekorasi Rumah</span>
+          <span class="category-list">Furnitur Anyaman</span>
+          <span class="category-list">Tas & Aksesori</span>
+          <span class="category-list">Produk Lifestyle & Fashion</span>
+          <span class="category-list">Souvenir & Gift Set</span>
+          <span class="category-list">Dapur & Makan</span>
+          <span class="category-list">Interior & Arsitektur</span>
+          <span class="category-list">Organizer & Penyimpanan</span>
+          <span class="category-list">Produk Anak & Edukatif</span>
+          <span class="category-list">Ritual & Tradisi Lokal</span>
+          <span class="category-list">Travel & Piknik</span>
+          <span class="category-list">Dekorasi Acara / Pernikahan</span>
+          <span class="category-list">Produk Ramah Lingkungan</span>
+          <span class="category-list">Produk Premium / Koleksi Khusus</span>
+        </div>
+        <div class="paginate">
+          <div class="left-paginate">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="right-paginate">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row-product">
+        <div class="col-product" data-category="Dekorasi Rumah">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/keranjang-hias-serbaguna.jpg"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Dekorasi Rumah</span>
+              <h3 class="title">Keranjang Anyaman Serbaguna Hiasan Interior</h3>
+              <p>
+                Keranjang serbaguna dari anyaman enceng gondok warna natural
+                brown, berkualitas premium. Cocok untuk hiasan interior, memberi
+                kesan cantik, natural, dan aesthetic yang membuat rumah lebih
+                rapi.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 249.900 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>2K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Perabot Rumah Tangga">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/keranjang-cucian-anyaman.jpg"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Perabot Rumah Tangga</span>
+              <h3 class="title">Keranjang Cucian Anyaman Laundry Serbaguna</h3>
+              <p>
+                Keranjang cucian dari bahan pandan atau rotan alami dengan
+                bentuk silinder dan tutup penutup. Ringan, kuat, dan tahan
+                lembap. Cocok untuk menyimpan pakaian kotor, mainan, atau
+                perabot lainnya agar rumah tetap rapi dan alam.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 75.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>2K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Dekorasi Rumah">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/hiasan-dinding-geometri-anyaman-bambu.avif"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Dekorasi Rumah</span>
+              <h3 class="title">
+                Dekorasi Hiasan Dinding Geometris Anyaman Bambu
+              </h3>
+              <p>
+                Dekorasi dinding anyaman berbentuk bulat dengan motif geometris
+                modern, terbuat dari bambu lokal pilihan. Cocok mempercantik
+                ruang tamu, ruang kerja, atau sudut rumah agar tampak estetik.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 82.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>2K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Tas & Aksesori">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/tas-selempang-anyaman.avif"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Tas & Aksesori</span>
+              <h3 class="title">
+                Tas Selempang Anyaman Stylish dengan Sentuhan Etnik Modern
+              </h3>
+              <p>
+                Tas selempang handmade dari anyaman pandan berkualitas, ringan,
+                kuat, dan berdesain etnik kekinian. Cocok untuk gaya santai,
+                liburan, atau aktivitas harian yang tetap modis.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 80.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>1.5K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Produk Lifestyle & Fashion">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/dompet-anyaman-unik.png"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Produk Lifestyle & Fashion</span>
+              <h3 class="title">
+                Dompet Anyaman Unik Praktis untuk Gaya Hidup Ramah Lingkungan
+              </h3>
+              <p>
+                Dompet compact dari anyaman enceng gondok berkualitas, memiliki
+                ruang cukup untuk kebutuhan harian, stylish, dan jadi pilihan
+                tepat untuk yang mendukung produk lokal berkelanjutan.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 50.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>1.4K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Souvenir & Gift Set">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/mini-keranjang-anyaman.png"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Souvenir & Gift Set</span>
+              <h3 class="title">
+                Mini Keranjang Anyaman Eksklusif untuk Souvenir Pernikahan
+                Elegan
+              </h3>
+              <p>
+                Souvenir mini berbentuk keranjang dari anyaman pandan, cocok
+                untuk pernikahan, dengan tampilan elegan dan bisa diisi permen,
+                bunga kering, atau hadiah kecil lainnya.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 30.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>1K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Interior & Arsitektur">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/panel-dinding-anyaman.jpg"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Interior & Arsitektur</span>
+              <h3 class="title">
+                Panel Dinding Anyaman Bambu Natural untuk Nuansa Ruangan Alami
+              </h3>
+              <p>
+                Panel dekoratif dari anyaman bambu lokal, ideal untuk pelapis
+                dinding interior rumah, kafe, atau villa dengan konsep tropis
+                dan suasana alami yang menenangkan.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 150.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>1K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Tas & Aksesori">
+          <div class="d-img">
+            <img src="../assets/images/product/totebag-anyaman.jpg" alt="" />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Tas & Aksesori</span>
+              <h3 class="title">
+                Totebag Anyaman Multifungsi Ramah Lingkungan dan Tahan Lama
+              </h3>
+              <p>
+                Tas jinjing anyaman dengan desain sederhana namun elegan, ramah
+                lingkungan, dan awet. Ideal digunakan untuk belanja, ke kampus,
+                atau piknik bersama teman dan keluarga.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 80.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>2K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Dapur & Makan">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/tatakan-piring-anyaman.jpg"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Dapur & Makan</span>
+              <h3 class="title">
+                Tatakan Piring Anyaman Serat Alami untuk Meja Makan Estetik
+              </h3>
+              <p>
+                Dibuat dari daun pandan berkualitas, tatakan ini memperindah
+                tampilan meja makan serta tahan panas, cocok digunakan harian
+                atau untuk acara khusus.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 30.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>2K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Interior & Arsitektur">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/langit-langit-anyaman.avif"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Interior & Arsitektur</span>
+              <h3 class="title">
+                Langit-Langit Anyaman Rotan Estetik untuk Interior Bernuansa
+                Tradisional
+              </h3>
+              <p>
+                Material rotan berkualitas yang dianyam rapi untuk plafon,
+                memberikan kesan hangat dan elegan, cocok diaplikasikan pada
+                ruang tamu, resort, atau ruang yoga alami.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 150.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>1.2K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Organizer & Penyimpanan">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/rak-gantung-anyaman.webp"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Organizer & Penyimpanan</span>
+              <h3 class="title">
+                Rak Gantung Anyaman Bambu Minimalis untuk Penyimpanan Hemat
+                Ruang
+              </h3>
+              <p>
+                Rak gantung ini praktis dan kuat untuk menyimpan bumbu,
+                perlengkapan mandi, atau barang ringan lain. Tampilan alami
+                cocok untuk berbagai interior.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 120.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>1K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-product" data-category="Produk Anak & Edukatif">
+          <div class="d-img">
+            <img
+              src="../assets/images/product/keranjang-mainan-anak-anyaman.jpg"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="">Detail Produk</a>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-desc">
+              <span>Produk Anak & Edukatif</span>
+              <h3 class="title">
+                Keranjang Mainan Anak Anyaman Warna-Warni Edukatif dan Estetik
+              </h3>
+              <p>
+                Tempat penyimpanan mainan yang sekaligus mengajarkan anak
+                merapikan barang. Warna cerah menarik dan desain aman bagi anak
+                usia 3 tahun ke atas.
+              </p>
+              <div class="pay">
+                <p class="price">Rp. 50.000 /Item</p>
+                <a href=""><i class="fas fa-cart-shopping"></i> Beli</a>
+              </div>
+            </div>
+            <div class="f-desc">
+              <div class="col-f-desc">
+                <i class="far fa-comments"></i>
+                <p>1K</p>
+              </div>
+              <div class="col-f-desc">
+                <i class="far fa-star"></i>
+                <p>4.75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="no-result-product">
+        <p class="color-span">
+          <i class="fa-solid fa-box"></i> Tidak ada produk yang ditemukan!
+        </p>
+      </div>
+    </section>
+
+    <footer class="container-footer">
+      <div class="row-footer">
+        <div class="up-footer">
+          <div class="left-footer">
+            <img src="../assets/images/anyamnusa.png" alt="Logo AnyamNusa" />
+            <p>
+              AnyamNusa menghadirkan anyaman khas
+              <span class="color-span">Nusantara</span> sebagai bentuk cinta
+              pada <span class="color-span">budaya</span> lokal dan gaya hidup
+              berkelanjutan
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jl. Letjend Pol. Soemarto
+              No.127, Watumas, Purwanegara, Kec. Purwokerto Utara, Kabupaten
+              Banyumas, Jawa Tengah 53127
+            </p>
+            <div class="social-media">
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-youtube"></i></a>
+              <a href=""><i class="fab fa-tiktok"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="right-footer">
+            <div class="col-foot">
+              <h4>Tentang Kami</h4>
+              <a href="#">Profil Perusahaan</a>
+              <a href="#">Cerita AnyamNusa</a>
+              <a href="#">Pengrajin Kami</a>
+              <a href="#">Dampak Sosial</a>
+            </div>
+            <div class="col-foot">
+              <h4>Produk</h4>
+              <a href="#">Anyaman Rumah Tangga</a>
+              <a href="#">Kerajinan Dekorasi</a>
+              <a href="#">Souvenir & Hadiah</a>
+              <a href="#">Pesanan Kustom</a>
+            </div>
+            <div class="col-foot">
+              <h4>Belanja</h4>
+              <a href="#">Cara Pemesanan</a>
+              <a href="#">Pembayaran</a>
+              <a href="#">Pengiriman</a>
+              <a href="#">Kebijakan Retur</a>
+            </div>
+            <div class="col-foot">
+              <h4>Informasi Lain</h4>
+              <a href="#">Blog & Artikel</a>
+              <a href="#testimoni">Testimoni Pelanggan</a>
+              <a href="#faqs">FAQ</a>
+              <a href="#">Hubungi Kami</a>
+            </div>
+          </div>
+        </div>
+        <div class="down-footer">
+          <p>
+            &copy; <span id="year_copyright"></span>
+            <span class="color-span">Anyam</span>Nusa. | All Rights Reserved
+          </p>
+          <div class="menu-footer">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Service</a>
+            <a href="">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

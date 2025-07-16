@@ -172,6 +172,44 @@ document.querySelectorAll(".d-blogs p").forEach((paragraph) => {
 // copyright
 document.querySelector("#year_copyright").innerHTML = new Date().getFullYear();
 
+// search team
+document.addEventListener("DOMContentLoaded", function () {
+  const artisans = document.querySelectorAll(".box-artisan");
+  const noResultTeam = document.querySelector(".no-result-team");
+  const searchInputTeam = document.getElementById("search_team");
+  const countDisplay = document.querySelector(".header-title .count h5");
+
+  function filterTeam(keyword) {
+    let matchCount = 0;
+
+    artisans.forEach((artisan) => {
+      const position = artisan.querySelector("#position")
+        ? artisan.querySelector("#position").innerText.toLowerCase()
+        : "";
+      const name = artisan.querySelector("h4")
+        ? artisan.querySelector("h4").innerText.toLowerCase()
+        : "";
+      const isMatch = position.includes(keyword) || name.includes(keyword);
+
+      artisan.style.display = isMatch ? "flex" : "none";
+      if (isMatch) matchCount++;
+    });
+
+    if (noResultTeam) {
+      noResultTeam.style.display = matchCount === 0 ? "block" : "none";
+    }
+
+    if (countDisplay) {
+      countDisplay.innerText = matchCount;
+    }
+  }
+
+  searchInputTeam.addEventListener("input", function () {
+    const keyword = this.value.toLowerCase();
+    filterTeam(keyword);
+  });
+});
+
 // scrollX Categories
 const scrollXCateory = document.getElementById("category-scroll");
 const btnCategoryLeft = document.querySelector(".left-paginate");

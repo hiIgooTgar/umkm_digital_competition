@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengrajin Lokal AnyamNusa.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <a href="#"
+            ><img src="../assets/images/anyamnusa.png" alt="Logo AnyamNusa"
+          /></a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <div class="content">
+            <div class="head">
+              <i class="fas fa-x" id="closeNav" onclick="hideMenuNav()"></i>
+              <img src="../assets/images/anyamnusa.png" alt="Logo AnyamNusa" />
+            </div>
+            <a href="#beranda" class="nav-list active-menu">Beranda</a>
+            <div class="nav-item has-submenu">
+              <a href="#" class="nav-list toggle-submenu">
+                Tentang Kami <i class="fas fa-chevron-down first chev-i"></i>
+              </a>
+              <div class="submenu feat-show">
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Kisah AnyamNusa</a
+                >
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Pengrajin Lokal</a
+                >
+              </div>
+            </div>
+
+            <a href="#produk" class="nav-list">Produk</a>
+            <a href="#testimoni" class="nav-list">Testimoni</a>
+
+            <div class="nav-item has-submenu">
+              <a href="#" class="nav-list toggle-submenu">
+                Galeri <i class="fas fa-chevron-down second chev-i"></i>
+              </a>
+              <div class="submenu serv-show">
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Foto</a
+                >
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> Video</a
+                >
+              </div>
+            </div>
+
+            <a href="#blogs" class="nav-list">Blogs & Artikel</a>
+            <div class="nav-item has-submenu">
+              <a href="#" class="nav-list toggle-submenu">
+                Dukungan Lainnya
+                <i class="fas fa-chevron-down third chev-i"></i>
+              </a>
+              <div class="submenu serv-show">
+                <a href="#"
+                  ><div class="line-submenu"></div>
+                  <i class="fa-regular fa-circle"></i> FAQs</a
+                >
+              </div>
+            </div>
+            <a class="btn-started" href="auth/sign-in.html">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <i class="fas fa-list-ul" id="hamburger" onclick="showMenuNav()"></i>
+        <a class="btn-started" href="auth/sign-in.html">Get Started</a>
+      </div>
+    </nav>
+
+    <div class="scroll-info">
+      <a href="#beranda" class="scroll-up">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+      <div class="app">
+        <a href=""><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="header-menu">
+      <div class="bars">
+        <div class="box">
+          <img src="../assets/images/anyamnusa.png" alt="" />
+        </div>
+      </div>
+      <div class="row-header-menu">
+        <div class="content">
+          <span class="submenu"> Pengrajin Lokal AnyamNusa</span>
+          <h2>
+            Kisah di <span class="color-span">Balik</span> Setiap Sosok
+            <span class="color-span">Pengrajin</span> Nusantara
+          </h2>
+          <p>
+            Setiap karya di AnyamNusa terlahir dari tangan pengrajin lokal yang
+            menenun warisan budaya dengan sepenuh hati dan makna.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="artisan">
+      <div class="header-title">
+        <div class="count">
+          <h2>
+            Team <span class="color-span">Pengrajin</span> Local
+            <span class="color-span">Anyam</span>Nusa
+          </h2>
+          <h5>18</h5>
+        </div>
+        <input
+          type="search"
+          name="search"
+          id="search_team"
+          autocomplete="off"
+          placeholder="Pencarian Tokoh AnyamNusa..."
+        />
+      </div>
+      <div class="row-artisan">
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">CEO AnyamNusa</span>
+              </div>
+            </div>
+            <h4>Iman Yulianto Saputra</h4>
+            <p>
+              Mengarahkan visi dan misi perusahaan, memastikan pertumbuhan
+              berkelanjutan serta menjaga nilai budaya lokal dalam setiap
+              langkah dan inovasi AnyamNusa.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Chief Operating Officer</span>
+              </div>
+            </div>
+            <h4>Siska Andarini</h4>
+            <p>
+              Memastikan operasional harian berjalan efisien, mulai dari proses
+              produksi, manajemen stok, hingga distribusi produk ke seluruh
+              jaringan pemasaran nasional.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Head of Product Design</span>
+              </div>
+            </div>
+            <h4>Raka Pradipta</h4>
+            <p>
+              Mengembangkan desain anyaman modern yang tetap mencerminkan
+              filosofi budaya, menciptakan produk inovatif yang relevan dan
+              bernilai tinggi bagi pasar lokal.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Creative Director</span>
+              </div>
+            </div>
+            <h4>Dina Yuliani</h4>
+            <p>
+              Mengarahkan seluruh visual brand agar tetap konsisten, kreatif,
+              dan menggambarkan keindahan nilai-nilai budaya yang relevan dan
+              menarik.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Marketing Manager</span>
+              </div>
+            </div>
+            <h4>Indra Maulana</h4>
+            <p>
+              Merancang strategi pemasaran yang efektif untuk memperkenalkan
+              produk anyaman lokal secara luas melalui media sosial, digital
+              ads, dan kampanye offline.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Finance Manager</span>
+              </div>
+            </div>
+            <h4>Ayu Prameswari</h4>
+            <p>
+              Mengelola keuangan perusahaan secara strategis, menyusun laporan
+              keuangan, penganggaran proyek, dan menjaga kestabilan finansial
+              perusahaan.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Head of Marketplace</span>
+              </div>
+            </div>
+            <h4>Rendy Firmansyah</h4>
+            <p>
+              Mengembangkan distribusi produk di platform digital agar produk
+              anyaman AnyamNusa menjangkau lebih banyak konsumen di seluruh
+              Indonesia.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Head of Customer Experience</span>
+              </div>
+            </div>
+            <h4>Laras Dewi Putri</h4>
+            <p>
+              Menjamin pelayanan pelanggan yang ramah dan cepat, menjawab
+              kebutuhan konsumen dengan pengalaman belanja yang menyenangkan dan
+              bernilai budaya.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i>
+                <span id="position">Lead Artisan Trainer</span>
+              </div>
+            </div>
+            <h4>Nur Salim</h4>
+            <p>
+              Melatih pengrajin lokal agar menghasilkan produk berkualitas
+              tinggi, menjaga keterampilan tradisional tetap relevan dengan
+              permintaan pasar modern saat ini.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Community Engagement Lead</span>
+              </div>
+            </div>
+            <h4>Mira Azharina</h4>
+            <p>
+              Menjalin relasi dengan komunitas pengrajin dan memberdayakan
+              mereka lewat kemitraan berkelanjutan, pelatihan, serta
+              pendampingan usaha langsung.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i><span id="position">HR Manager</span>
+              </div>
+            </div>
+            <h4>Rian Saputra</h4>
+            <p>
+              Mengelola sumber daya manusia perusahaan, mulai dari rekrutmen
+              hingga pengembangan tim agar tetap solid, profesional, dan berdaya
+              saing tinggi.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Quality Assurance Supervisor</span>
+              </div>
+            </div>
+            <h4>Siti Halimah</h4>
+            <p>
+              Menjamin kualitas produk secara menyeluruh dari tahap produksi
+              hingga pengemasan, agar setiap anyaman sampai ke pelanggan dengan
+              sempurna.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Logistics Coordinator</span>
+              </div>
+            </div>
+            <h4>Andre Santoso</h4>
+            <p>
+              Mengelola pengiriman produk secara efisien, mengatur jalur
+              distribusi, dan memastikan kecepatan serta keamanan logistik ke
+              seluruh wilayah Indonesia.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Social Media Specialist</span>
+              </div>
+            </div>
+            <h4>Ratih Wahyuni</h4>
+            <p>
+              Mengelola konten kreatif di media sosial untuk edukasi,
+              meningkatkan awareness, dan membangun keterlibatan pasar produk
+              anyaman lokal.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Head of Sustainability</span>
+              </div>
+            </div>
+            <h4>Bambang Yudha</h4>
+            <p>
+              Menerapkan prinsip ramah lingkungan di semua lini produksi, mulai
+              dari bahan baku, proses kerja, hingga sistem pengelolaan limbah.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i
+                ><span id="position">Legal Advisor</span>
+              </div>
+            </div>
+            <h4>Nina Karlina</h4>
+            <p>
+              Memastikan semua aktivitas perusahaan sesuai regulasi, menangani
+              kontrak kerja sama, serta melindungi hak kekayaan intelektual
+              produk anyaman.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/male-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i>
+                <span id="position">R&D Specialist</span>
+              </div>
+            </div>
+            <h4>Doni Ramadhan</h4>
+            <p>
+              Meneliti tren pasar dan mengembangkan inovasi produk berdasarkan
+              kebutuhan konsumen, memastikan produk selalu relevan dan
+              kompetitif.
+            </p>
+          </div>
+        </div>
+        <div class="box-artisan">
+          <div class="content-left">
+            <img src="../assets/images/team/female-profile.jpg" alt="" />
+          </div>
+          <div class="content-right">
+            <div class="team">
+              <div class="c-team">
+                <i class="fas fa-user"></i>
+                <span id="position">Photographer & Visual Stylist</span>
+              </div>
+            </div>
+            <h4>Tiara Lestari</h4>
+            <p>
+              Membuat foto produk yang menarik, artistik, dan berkualitas tinggi
+              untuk promosi visual di website, marketplace, maupun media sosial.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="no-result-team">
+        <p class="color-span">
+          <i class="fa-solid fa-user"></i> Tidak ada team yang ditemukan!
+        </p>
+      </div>
+    </section>
+
+    <footer class="container-footer">
+      <div class="row-footer">
+        <div class="up-footer">
+          <div class="left-footer">
+            <img src="../assets/images/anyamnusa.png" alt="Logo AnyamNusa" />
+            <p>
+              AnyamNusa menghadirkan anyaman khas
+              <span class="color-span">Nusantara</span> sebagai bentuk cinta
+              pada <span class="color-span">budaya</span> lokal dan gaya hidup
+              berkelanjutan
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jl. Letjend Pol. Soemarto
+              No.127, Watumas, Purwanegara, Kec. Purwokerto Utara, Kabupaten
+              Banyumas, Jawa Tengah 53127
+            </p>
+            <div class="social-media">
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-youtube"></i></a>
+              <a href=""><i class="fab fa-tiktok"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="right-footer">
+            <div class="col-foot">
+              <h4>Tentang Kami</h4>
+              <a href="#">Profil Perusahaan</a>
+              <a href="#">Cerita AnyamNusa</a>
+              <a href="#">Pengrajin Kami</a>
+              <a href="#">Dampak Sosial</a>
+            </div>
+            <div class="col-foot">
+              <h4>Produk</h4>
+              <a href="#">Anyaman Rumah Tangga</a>
+              <a href="#">Kerajinan Dekorasi</a>
+              <a href="#">Souvenir & Hadiah</a>
+              <a href="#">Pesanan Kustom</a>
+            </div>
+            <div class="col-foot">
+              <h4>Belanja</h4>
+              <a href="#">Cara Pemesanan</a>
+              <a href="#">Pembayaran</a>
+              <a href="#">Pengiriman</a>
+              <a href="#">Kebijakan Retur</a>
+            </div>
+            <div class="col-foot">
+              <h4>Informasi Lain</h4>
+              <a href="#">Blog & Artikel</a>
+              <a href="#testimoni">Testimoni Pelanggan</a>
+              <a href="#faqs">FAQ</a>
+              <a href="#">Hubungi Kami</a>
+            </div>
+          </div>
+        </div>
+        <div class="down-footer">
+          <p>
+            &copy; <span id="year_copyright"></span>
+            <span class="color-span">Anyam</span>Nusa. | All Rights Reserved
+          </p>
+          <div class="menu-footer">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Service</a>
+            <a href="">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      // search team
+      document.addEventListener("DOMContentLoaded", function () {
+        const artisans = document.querySelectorAll(".box-artisan");
+        const noResultTeam = document.querySelector(".no-result-team");
+        const searchInputTeam = document.getElementById("search_team");
+        const countDisplay = document.querySelector(".header-title .count h5");
+
+        function filterTeam(keyword) {
+          let matchCount = 0;
+
+          artisans.forEach((artisan) => {
+            const position = artisan.querySelector("#position")
+              ? artisan.querySelector("#position").innerText.toLowerCase()
+              : "";
+            const name = artisan.querySelector("h4")
+              ? artisan.querySelector("h4").innerText.toLowerCase()
+              : "";
+            const isMatch =
+              position.includes(keyword) || name.includes(keyword);
+
+            artisan.style.display = isMatch ? "flex" : "none";
+            if (isMatch) matchCount++;
+          });
+
+          if (noResultTeam) {
+            noResultTeam.style.display = matchCount === 0 ? "block" : "none";
+          }
+
+          if (countDisplay) {
+            countDisplay.innerText = matchCount;
+          }
+        }
+
+        searchInputTeam.addEventListener("input", function () {
+          const keyword = this.value.toLowerCase();
+          filterTeam(keyword);
+        });
+      });
+    </script>
+  </body>
+</html>
